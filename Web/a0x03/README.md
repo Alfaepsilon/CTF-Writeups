@@ -1,0 +1,1 @@
+The first thing to notice is that if an empty/wrong username is entered into the username field, there is no response. However, if an correct one is entered we get "Password incorrect, added a lockout attempt".
