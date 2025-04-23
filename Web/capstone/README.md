@@ -6,7 +6,7 @@ Looking in the console, it seems like quotes are escaped:
 
 <img src="https://github.com/user-attachments/assets/3f9e6be2-2019-490e-ba5e-7b64f54b2ccf" width="500"/> 
 
-Replacing " with \` in the previous command (<img src=x onerror=window.location.replace(\`http://localhost/index.php`)>) takes us back to index.php which means that we have a server-side (stored) XSS. For PoC running, running
+Replacing " with \` in the previous command (<img src=x onerror=window.location.replace(\`http://localhost/index.php`)>) takes us back to index.php which means that we have a server-side (stored) XSS. For PoC, running
 <script>alert(document.domain)</script>
 yields: 
 
