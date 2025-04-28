@@ -18,7 +18,9 @@ enum4linux -a 10.10.10.4
 ```
 
 This however does not yield much either. Since as said earlier Windows XP is known to be vulnerable, I attempted to Google information about this specific smb version. There were a few known vulnerabilities and one, ms08-076, had a metasploit module. Trying it out, I got a meterpreter shell with NT AUTHORITY\SYSTEM privileges:
+
 <img src="https://github.com/user-attachments/assets/3615004f-f011-4599-85c1-048e841928d6" width=300>
+
 <img src="https://github.com/user-attachments/assets/cbc0454d-be2f-4653-baf6-6a1ca54c3052" width=300>
 
 There is no "Users" folder under C:\Users or C:\Windows\Users. To find the flags, we can search for their file names (user.txt and root.txt):
