@@ -3,6 +3,7 @@ The first thing to do is to enumerate the machine, this can be done with a nmap 
 nmap -p- -T4 -A 10.10.10.40
 ```
 <img src="https://github.com/user-attachments/assets/07cf375e-cd37-4c88-ad0d-ac6a670e5641" width="400"/>
+
 From the output above, we can see that most of the ports open are msrpc ports. Another port that is open is 139 and 445, which means that smb is open. Let's see if we can connect to it! We can list the shares, and there are two that are interesting: "Share" and "Users":
 
 <img src="https://github.com/user-attachments/assets/6211d611-8d69-442b-b85c-e85934000524" width="300"/>
