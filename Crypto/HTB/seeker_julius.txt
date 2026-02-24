@@ -1,0 +1,2 @@
+The challenge seems to relate to a shift cipher. Looking at the code it seems to use random bytes as input for the shifting operation. There are a plethora of shift cipher decryption tools online, such as dcode.fr.
+Using this tool and pasting in the cipher text (after removing the '0's) I get the original message and the flag.
