@@ -128,6 +128,9 @@ sudo knife exec script.rb
 ```
 Executing the above command spawned a shell as root, which allowed the root flag to be read.
 
+## Remediation Steps
+Patch the vulnerable PHP version, and disallow passwordless sudo for james.
+
 ---
 
 # References
