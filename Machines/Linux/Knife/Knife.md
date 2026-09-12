@@ -108,7 +108,9 @@ Once authenticated as james via ssh, I checked my privileges.
 ```bash
 sudo -l
 ```
+
 This returned something interesting, the fact that james had passwordless sudo permissions on /usr/bin/knife.
+
 ![Sudo permissions for james](images/sudo_james.png)
 
 Investigating the knife tool, it seems to be a command line utility for chef, which is a infrastructure provisioning tool like Ansible. Apparently, it is possible to execute local ruby scripts using knife:
@@ -117,7 +119,6 @@ Investigating the knife tool, it seems to be a command line utility for chef, wh
 knife exec script.rb
 ```
 Seeing this, and the fact that james can execute knife using passwordless sudo, we can construct a malicious ruby script and then run it as root. Like the following:
-script.rb:
 ```ruby
 system('/bin/bash -i')
 ```
@@ -126,6 +127,7 @@ system('/bin/bash -i')
 sudo knife exec script.rb
 ```
 Executing the above command spawned a shell as root, which allowed the root flag to be read.
+
 ---
 
 # References
