@@ -64,9 +64,6 @@ PHP version seemed to be a dev build, which might be interesting: PHP/8.1.0-dev.
 ## Vulnerability Identification
 
 ### Discovery
-
-Describe:
-
 Investigating the PHP version further, there seemed to be a backdoor built into it. The backdoor is activated if the "User-Agentt" header is present in requests to the web server. ExploitDB had a Python script to exploit the backdoor [1].
 
 ### Exploitation
