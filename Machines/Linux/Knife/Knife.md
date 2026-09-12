@@ -42,8 +42,7 @@ nmap -p- -A -T4 $TARGET_IP
 ### HTTP
 
 #### Homepage
-
-images/first_page.png
+\!\[First page\]\(images/first_page.png\)
 
 Source code of website did not seem to contain anything interesting.
 
@@ -75,8 +74,7 @@ python3 php-8-1-0-backdoor.py
 The script prompted for the target host and then spawned a pseudo shell on the server.
 
 ### Proof
-
-images/php-8.1.0-backdoor-shell.png
+\!\[Backdoor access\]\(images/php-8.1.0-backdoor-shell.png\)
 ---
 
 # Post Exploitation
@@ -98,8 +96,7 @@ On local host:
 chmod 600 private_key
 ssh -i private_key james@$TARGET_IP
 ```
-
-images/ssh_james.png
+\!\[ssh access as james\]\(images/ssh_james.png\)
 ---
 
 # Privilege Escalation
@@ -111,7 +108,7 @@ sudo -l
 ```
 This returned something interesting, the fact that james had passwordless sudo permissions on /usr/bin/knife.
 
-images/sudo_james.sh
+\!\[Sudo permissions for james\]\(images/sudo_james.png\)
 
 Investigating the knife tool, it seems to be a command line utility for chef, which is a infrastructure provisioning tool like Ansible. Apparently, it is possible to execute local ruby scripts using knife:
 
