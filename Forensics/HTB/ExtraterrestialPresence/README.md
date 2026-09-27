@@ -13,7 +13,7 @@ echo -e "W1VuaXRdCkRlc2NyaXB0aW9uPUhUQnt0aDNzM180bDEzblNfNHIzX3MwMDAwMF9iNHMxY30
 
 systemctl enable service.service
 ```
-Looking at this shell script we can see that it tries to create a new service, but the content of the service is base 64 decoded. We can decode this base64 data by copying it into a file and then use certutil.exe:
+Looking at this shell script we can see that it tries to create a new service, but the content of the service is base64 encoded. We can decode this base64 data by copying it into a file and then use certutil.exe:
 ```batch
 certutil -decode input.txt output.txt
 ```
